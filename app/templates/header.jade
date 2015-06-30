@@ -1,0 +1,70 @@
+extends head
+
+block header
+  header.Header
+    .Container
+      h1.Header-logo Sit ubu sit!
+      nav.Navigation
+        ul.Navigation-list
+          li.Navigation-item: a(title="Prices", href="#prices") Prices
+          li.Navigation-item: a(title="Services", href="#services") Services
+          li.Navigation-item: a(title="Contact", href="#contact") Contact
+
+  .Overlay
+    a.Button.Overlay-close(data-action="close-overlay", href="#") &times;
+
+    .Overlay-content.js-enrolmentSection
+      h3.Overlay-heading.Section-heading Enrol Your Dog In A Course
+      p.Overlay-copy Use the form below to enrol your dog in a course. After enrolling, your dog will have a <strong>reserved spot in the course for the next 48 hours</strong>. A deposit will have to be made within this time to guarantee your dog's spot in the course. We will send you an email with all the details after form submission.
+
+      form.js-booking(novalidate)
+        .Slat
+          label(for="name")
+          input(type="text" id="name" name="name" placeholder="Your Full Name" value="")
+        .Slat
+          label(for="mobile")
+          input(type="tel" id="mobile" name="mobile" placeholder="Mobile Number" value="")
+        .Slat
+          input(type="email" name="email" placeholder="Email address" value="")
+        .Slat
+          input(type="text" name="dogsName" placeholder="Your Dog's Name" value="")
+
+        .Slat
+          label Course You Wish To Enrol In
+          br
+          select(data-action="selectCourse")
+            option Puppy Preschool
+            option Basic Obedience
+            option Tricks For Your Dog
+            option Agility Course Training
+
+        .Slat
+          label Starting Date You Want
+          br
+          select(data-action="updateAvailability")
+            option 1st June (3 spots)
+            option 1st July (10 spots)
+
+
+        .Slat
+          button.Button.Button--prominent(data-action="enrol", type="submit") Enrol My Dog
+    .Overlay-content.Message--success
+      h3.Message-heading Your dog has been successfully enrolled!
+
+  section.Marquee
+    .Marquee-background
+
+    .Marquee-content.Container
+      .Marquee-text
+        h1 Dog and puppy training courses, <br>designed for new dog owners.
+        //- h1 Dog and Puppy Training Courses, <br>Designed For New Dog Owners.
+        p All our classes teach modern, behavioural techniques for new owners to learn how to train their new best friend.
+        p: a(title="Learn More" href="#services").Marquee-link Learn more
+        //- p: button learn more
+        //- p All our classes use modern, behavioural techniques to ensure that your dog will be as well-behaved as they are cute.
+        //- button.Button--light Learn more about our services
+
+    a.Arrow(href='#services'): span.Arrow-shape
+
+  block content
+

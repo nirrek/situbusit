@@ -1,0 +1,162 @@
+/**
+ * Header component
+ */
+.Header {
+    position: fixed;
+    z-index: 11; // z-index of main content is 10
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .11);
+    transition: top 0.2s ease-in-out;
+
+    @media ($mobile) {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+
+.isOffscreen {
+    top: -65px;
+}
+
+.isBelowMarquee {
+    background: #D15748;
+}
+
+.Header-logo {
+    @extend %headerFontStyle;
+    position: absolute;
+    top: 12px;
+    letter-spacing: -1px;
+    font-weight: 700;
+}
+
+
+/**
+ * Marquee component
+ */
+.Marquee {
+    position: fixed;
+    background: #D15748;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: image-height($cover);
+    @media ($mobile) {
+        padding: 0 0.5rem;
+    }
+}
+
+.Marquee-content {
+    position: relative;
+    z-index: 1;
+}
+
+.Marquee-text {
+    max-width: 35rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 6rem;
+}
+
+.Marquee-text h1 {
+    color: #fff;
+    text-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px;
+    line-height: 1.35;
+    letter-spacing: -1px;
+    font-size: 2rem;
+
+    @media ($mobile) {
+        font-size: 2.2rem;
+    }
+}
+
+
+.Marquee-text p {
+    color: $marquee-light-color;
+    text-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px;
+    font-size: 1.1rem;
+
+    @media ($mobile) {
+        font-size: inherit;
+    }
+}
+
+.Marquee-link {
+    @extend %headerLinkStyle;
+    padding: .5rem .9rem .54rem;
+    font-size: .9rem;
+    font-weight: 400;
+    text-shadow: none;
+    border-radius: 3px;
+    border: 1px solid $marquee-light-color;
+    color:$marquee-light-color;
+    display: inline-block;
+    margin-top: 1rem;
+
+    &:hover {
+        border-bottom: 1px solid #fff;
+    }
+
+    @media ($mobile) {
+        margin-top: 2rem;
+    }
+}
+
+.Marquee-background {
+    background-image: image-url($cover);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 4px 0 rgba(0,0,0,0.15);
+}
+
+/**
+ * Arrow components (used in marquee area)
+ */
+.Arrow {
+    width: 25px;
+    height: 30px;
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    margin-left: -10px;
+
+    &:active {
+        top: auto;
+        position: absolute;
+    }
+    &:hover {
+        border: none;
+    }
+}
+
+.Arrow-shape {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    // position: absolute;
+    // bottom: 3rem;
+    // left: 50%;
+    // margin-left: -10px;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    background: rgba(0, 0, 0, 0);
+    border-left: 0;
+    border-top: 0;
+    outline: 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    cursor: pointer;
+
+    &:hover {
+        border-color: rgba(255, 255, 255, 0.6);
+    }
+}

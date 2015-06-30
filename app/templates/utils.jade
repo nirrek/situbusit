@@ -1,0 +1,52 @@
+mixin explanationPaneTable(data)
+  figure.Service-figure.u-col
+    table
+      tr
+        th Course Length
+        td= data.length
+      tr
+        th Next Start Date
+        td= data.start
+      tr
+        th Availability
+        td
+          if data.avail
+            span.Tag--green #{data.spots} Spots Available
+          else
+            span.Tag--red No Spots Available
+      tr
+        th Lessons
+        td #{data.lessons} lessons/week
+      tr
+        th Cost
+        td $#{data.cost}
+      tr
+        th Dog Ages
+        td!= data.ages
+      tr
+        th Times
+        td!= data.times
+
+    .Service-wrapButton
+      a.Button(data-action="open-overlay", href="#") #{data.callToAction} &rarr;
+
+mixin explanationPaneHeader(data)
+  header.Service-header.u-col
+    h3.Service-heading= data.heading
+    .Service-copy
+      if block
+        block
+
+
+mixin sectionHeader(heading)
+  header.Section-header
+    a(href="#"+attributes.id, id=attributes.id): h2.Section-heading= heading
+    .Section-subheading
+      if block
+        block
+
+mixin course(data)
+  .Course.u-col
+    h3.Course-name= data.name
+    span.Course-price <span class="Course-priceSymbol">$</span> #{data.price}
+    span.Course-info full course fee

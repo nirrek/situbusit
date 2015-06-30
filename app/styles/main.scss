@@ -1,0 +1,255 @@
+// bower:scss
+// endbower
+//
+
+// Vendor dependencies
+@import "compass";
+@import "modular-scale";
+
+// Authored dependencies
+@import "variables";
+@import "utilities";
+
+// Base styles
+@import "base/tables";
+@import "base/typography";
+@import "base/form";
+
+// Components
+@import "components/nav";
+@import "components/tags";
+@import "components/buttons";
+@import "components/slat";
+@import "components/overlay";
+
+// Modules
+@import "modules/header";
+@import "modules/footer";
+
+/**
+ * Basic setup styles
+ */
+
+/*  Apply an improved box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+    font-size: 16px; // set the reference size for REM. 1rem = 16px
+    line-height: 1.5;
+}
+
+body {
+    background: $bg-color--primary;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+img {
+    max-width: 100%;
+    margin-top: 3rem;
+}
+
+/**
+ * Main Component
+ * Wraps the non-header section of the page. Allows for scrolling over the top
+ * of the header and marquee area.
+ */
+.Main {
+    position: relative;
+    z-index: 10;
+    overflow: auto;
+    height: 100%;
+    background: $bg-color--primary;
+    border-top: 1px solid #fff;
+    margin-top: image-height($cover);
+    box-shadow: 0 -4px 0 rgba(0, 0, 0, 0.2);
+}
+
+/**
+ * Container component
+ * Used for wrapping modules that need to be center aligned
+ */
+.Container {
+    max-width: 50em; // fallback for non-rem supported browsers
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+/**
+ * Section
+ * The section component is used for vertical stacking of core modules.
+ */
+%areaHeading {
+    color: $color--area-heading;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-shadow: 0 1px 0 #fff;
+}
+
+%areaCopy {
+    color: $color--area-copy;
+    line-height: 1.8;
+}
+
+section {
+    padding: $section-padding 0;
+    @media ($mobile) {
+        padding: 6rem 1rem;
+    }
+}
+
+.Section-header {
+    text-align: center;
+}
+
+.Section-heading {
+    @extend %areaHeading;
+}
+
+.Section-subheading {
+    @extend %areaCopy;
+    max-width: 35rem;
+    margin: 0 auto;
+}
+
+.Section--services {
+    padding: 8rem 0;
+    @media ($mobile) {
+        padding: 8rem 1rem;
+    }
+}
+
+.Section--prices {
+    background: $bg-color--secondary;
+}
+
+
+/**
+ * Service
+ * A service component displays information on a provided service.
+ */
+.Service {
+    @extend .cf;
+    padding: 6rem 0;
+    border-bottom: 1px solid #eaeaea;
+
+    &:last-of-type {
+        border-bottom: none;
+    }
+
+    &:last-of-type {
+        padding-bottom: 0;
+    }
+}
+
+.Service-header {
+    @media ($tablet) {
+        width: 40%;
+    }
+}
+
+.Service-figure {
+    margin: 0;
+    @media ($tablet) {
+        width: 60%;
+    }
+}
+
+.Service-heading {
+    @extend %areaHeading;
+}
+
+.Service-copy {
+    @extend %areaCopy;
+    font-size: 0.9rem;
+}
+
+.Service-figure table {
+    float: right;
+    margin-top: 3.5rem;
+
+    @media ($mobile) {
+        float: none;
+        margin: 3.5rem auto 0;
+    }
+}
+
+.Service-wrapButton {
+    width: 336px;
+    float: right;
+    margin-top: 3em;
+    text-align: center;
+}
+
+
+/**
+ * CourseList & Course Component
+ * Used for creating a list of courses
+ */
+.CourseList {
+    @extend .cf;
+    margin-top: 6rem;
+}
+
+.Course {
+    padding: 3rem 0;
+    background: #191919;
+    text-align: center;
+    color: #fff;
+    @media ($tablet) {
+        width: 25%;
+    }
+}
+
+.Course-name {
+    @extend %displayBlock;
+    @extend %areaHeading;
+    font-size: 1rem;
+    color: #999;
+    text-shadow: none;
+    line-height: 1.2;
+    font-weight: 200;
+    min-height: 2.5rem; // required to normalize the heights
+    margin-bottom: 0;
+}
+
+.Course-price {
+    @extend %displayBlock;
+    font-size: 3.5rem;
+    padding-bottom: 0;
+    position: relative;
+}
+
+.Course-priceSymbol {
+    vertical-align: top;
+    font-size: 2rem;
+    font-weight: normal;
+    position: absolute;
+    margin-left: -1.1rem;
+    margin-top: 0.6rem;
+}
+
+.Course-info {
+    @extend %displayBlock;
+    font-style: italic;
+    color: #777;
+    font-size: 0.8rem;
+}
+
+/**
+ * CallToAction component
+ */
+.CallToAction {
+    text-align: center;
+    margin-top: 6rem;
+}
+
+

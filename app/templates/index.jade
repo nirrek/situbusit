@@ -1,0 +1,132 @@
+include utils
+extends header
+
+block content
+  .Main
+    section.Section.Section--services
+      .Container
+
+        +sectionHeader('Services')(id='services')
+          p We provide puppy training all the way through to advanced trick training. All our classes use modern behavioural techniques to teach your dog in the most efficient and friendly way.
+
+        article.Service
+          +explanationPaneHeader({
+            heading: "Puppy Preschool"
+          })
+            p These take place over 5 weeks – with 1 x 2hr session per week and homework in between. This 5 week puppy pre school course is ideal for puppies aged between 8-16 weeks. Class sizes are small to allow for individual attention. This course is designed to set your puppy up with a basic foundation in learning &amp; training and prevent future problems such as fearfulness, aggression and destructive behaviour. To get the full benefits of the course, practicing at home during the week is vital.
+            p This class will also assist in socialising your puppy to other dogs, people and new things in a safe and secure environment. This is vital to ensure a well adjusted, calm, happy puppy.
+            p We run puppy preschools starting the first week of the month. We have sessions on Saturday mornings (9 -11) or Wednesday evenings (6 – 8).
+
+          +explanationPaneTable({
+            length: '5 weeks',
+            start: '1st June',
+            avail: true,
+            spots: 3,
+            lessons: '1 x 2h',
+            cost: 250,
+            ages: '8&ndash;16 weeks',
+            times: 'Sat 9&ndash;11am <br>Wed 6&ndash;8pm',
+            callToAction: "Enroll Your Puppy"
+          })
+
+        article.Service
+          +explanationPaneHeader({
+            heading: "Basic Obedience"
+          })
+            p Covers basic obedience training for your dog – young or old. This 6 week beginner's course is ideal for older puppies and dogs that are new to training or alternatively may know a few commands to varying degrees of reliability. Class sizes are small to allow for individual attention. No prior training knowledge is required on either the part of the owner or dog. To get the full benefits of the course, practicing at home during the week is vital.
+            p An added benefit of attending a group class with your dog is socialising them to other dogs and people in a safe nd secure environment. This is vital to ensure a well adjusted, calm, happy dog.
+            p Preventing common problems such as Jumping Up, Chewing, Attention-Seeking, Hyperactivity and Digging are also addressed during this course.
+
+          +explanationPaneTable({
+            length: '6 weeks',
+            start: '1st June',
+            avail: false,
+            spots: 3,
+            lessons: '1 x 2h',
+            cost: 200,
+            ages: '16 weeks+',
+            times: 'Sat 11am&ndash;1pm <br>Thu 6&ndash;8pm',
+            callToAction: "Enroll Your Dog"
+          })
+
+        article.Service
+          +explanationPaneHeader({
+            heading: "Tricks For Your Dog"
+          })
+            p This 5 week clicker training course is ideal for older puppies and adult dogs that have some basic training. Class sizes are small to allow for individual attention. Teaching tricks and games is a great way to get to know your dog better using fun and interesting training techniques. This class is fun, easy and there's no pressure to be perfect!
+            p Once you learn how to train your dog to do tricks, you can train nearly any new behaviour. Even obedience exercises are essentially just tricks! When you and your dog approach training in a relaxed and fun manner it leads to improved learning, for both of you!
+            p Learn tricks such as High Five, Wave, Roll Over, Spin, Dead Dog, Sneeze, Yawn, Fetch, Take a Bow, Back Up, Touch and More. If you've ever wanted your dog to be able to get you a beer then this is the course for you!
+
+          +explanationPaneTable({
+            length: '5 weeks',
+            start: '1st June',
+            avail: true,
+            spots: 7,
+            lessons: '1 x 2h',
+            cost: 200,
+            ages: '16 weeks+',
+            times: 'Sat 9&ndash;11am <br>Wed 6&ndash;8pm',
+            callToAction: "Enroll Your Dog"
+          })
+
+        article.Service
+            +explanationPaneHeader({
+              heading: "Agility Course Training"
+            })
+              p This 6 week course is ideal for dogs that have previously completed Basic Obedience &amp; Tricks courses (however this is not essential). Class sizes are small to allow for individual attention. This course is designed to teach owners how to control their dogs through a basic but fun agility course. We will teach you how to connect with your dog and teach your dog how to follow hand &amp; body signals. Learn how to get your dog to run through tunnels, jump over jumps, weave the weave poles and lots of other fun things.
+              p This course is a fantastic introduction to the world of dog sports and a great way to teach your dog the correct way and to achieve the best results.
+
+            +explanationPaneTable({
+              length: '6 weeks',
+              start: '1st June',
+              avail: true,
+              spots: 5,
+              lessons: '1 x 2h',
+              cost: 300,
+              ages: '16 weeks+',
+              times: 'Sat 11am&ndash;1pm <br>Thu 6&ndash;8pm',
+              callToAction: "Enroll Your Dog"
+            })
+
+
+    section.Section--prices
+      .Container
+
+        +sectionHeader('Prices')(id='prices')
+          p Below are the prices for our popular dog training courses. All of our courses go for 5 or 6 weeks, so the prices are for the full duration.
+
+        .CourseList.Container
+          +course({
+            name: 'Puppy Preschool',
+            price: 250,
+          })
+
+          +course({
+            name: 'Basic Obedience',
+            price: 200
+          })
+
+          +course({
+            name: 'Tricks For Your Dog',
+            price: 250
+          })
+
+          +course({
+            name: 'Agility Course Training',
+            price: 300
+          })
+
+        footer
+          .Container
+            .CallToAction
+              a.Button.Button--prominent(class="Button Button--prominent", data-action="open-overlay", href="#") Reserve Your Dog A Place In An Upcoming Course &rarr;
+
+    section.contact
+      .Container
+        +sectionHeader('Contact')(id='contact')
+          p We are located at the <a title="Our location on google maps" href="https://goo.gl/maps/Z7qnI" target="_blank">Cnr of Venner Rd &amp; Fairfield Rd, Fairfield</a>. <br>Call the office on <b>3344 8962</b> or our head trainer Jason on <b>0498 746 242</b>.<br> <a href="mailto:hello@situbusit.com">hello@situbusit.com</a>
+
+        a.a--wrapperLink(title="Our location on google maps", href="https://goo.gl/maps/Z7qnI", target="_blank")
+          img(src="images/map.jpg", alt="Our location on google maps")
+
+    include footer

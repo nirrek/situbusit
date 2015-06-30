@@ -1,0 +1,31 @@
+/**
+ * Table styles
+ */
+table {
+    border-collapse: collapse;
+    background-color: #efefef;
+    font-size: 0.9rem;
+}
+
+td, th {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 1rem 1.5rem;
+
+    @media ($mobile) {
+        padding: 0.5rem 1rem;
+    }
+}
+
+td {
+    color: $color--area-copy;
+}
+
+th {
+    font-weight: 600;
+    color: $color--area-heading;
+    text-align: left;
+}
+
+table tr:last-of-type td, table tr:last-of-type th {
+    border-bottom: none;
+}

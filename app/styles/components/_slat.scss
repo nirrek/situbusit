@@ -1,0 +1,11 @@
+/**
+ * Slat component
+ * A slat is a reusable block-level component for vertical stacking.
+ */
+.Slat {
+    padding-bottom: 1.5rem;
+
+    input, textarea, button {
+        width: 100%
+    }
+}

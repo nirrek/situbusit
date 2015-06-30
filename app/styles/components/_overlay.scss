@@ -1,0 +1,106 @@
+/**
+ * Overlay Component
+ * The overlay component is a fullscreen, fixed position overlay.
+ */
+.Overlay {
+    display: none;
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 20;
+    background: rgba(255, 0, 0, 0.8);
+    background: #fafafa;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.15s linear;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-left: -0.25em; // otherwise pushes block content to newline.
+    }
+
+    @media ($mobile) {
+        &:before {
+            content: '';
+            height: 0;
+            display: none;
+        }
+    }
+}
+
+.Overlay.is-Open {
+    display: inherit;
+}
+
+.fadeIn {
+    opacity: 1;
+}
+
+%Overlay-content {
+    max-width: 30rem;
+    padding: 40px;
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.Overlay-content {
+    @extend %Overlay-content;
+}
+
+.Overlay-close {
+    position: absolute;
+    padding: 10px;
+    top: 0;
+    right: 1.1em;
+    right: 1.1rem;
+    font-size: 40px;
+    color: #555;
+    border: none;
+    &:focus {
+        outline: none;
+        border: none;
+    }
+    &:hover {
+        border: none;
+        cursor: pointer;
+    }
+    &:active {
+        position: absolute;
+    }
+    &:visited {
+        color: #555;
+    }
+}
+
+.content--booking {
+    max-width: 25rem;
+    padding-top: 6rem;
+}
+
+.Overlay-copy {
+    @extend %areaCopy;
+    font-size: 0.9rem;
+    padding-bottom: 0;
+}
+
+.is-Open {
+    left: 0;
+}
+
+/**
+ * Message Component
+ * The message component is for rendering success messages.
+ */
+.Message--success {
+    display: none;
+    .Message-heading {
+        color: $green;
+    }
+}

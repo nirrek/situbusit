@@ -1,0 +1,45 @@
+/**
+ * Utility styles
+ * Utilities are low-level structural and positional traits.
+ * They can be applied directly to any element within a component.
+ */
+.cf:before, .cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.u-preventScrolling {
+    overflow: hidden;
+}
+
+.u-col {
+    @media ($tablet) {
+        float: left;
+    }
+}
+
+// Utilities for inheritance
+%displayBlock {
+    display: block;
+}
+
+%headerFontStyle {
+  color: #fff;
+  text-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px;
+}
+
+%headerLinkStyle {
+    color: #fff;
+    &:hover {
+        color: #fff;
+        position: static;
+        border-bottom: none;
+    }
+    &:visited {
+        color: #fff;
+    }
+}

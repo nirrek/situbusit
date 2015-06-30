@@ -1,0 +1,15 @@
+/**
+ * Footer component.
+ * The .Footer component is the sitewide footer.
+ */
+.Footer {
+  background-color: $bg-color--secondary;
+  padding: 3rem 0;
+  margin-top: 6rem;
+  font-size: 0.9rem;
+  color: $color--area-copy;
+
+  @media ($mobile) {
+    padding: 3rem 1rem;
+  }
+}

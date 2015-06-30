@@ -1,0 +1,11 @@
+{
+  "name": "situbusit",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "jquery": "~1.11.0",
+    "normalize-css": "~3.0.0",
+    "jquery.localScroll": "~1.3.5"
+  },
+  "devDependencies": {}
+}

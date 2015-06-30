@@ -1,0 +1,52 @@
+/**
+ * Button Component
+ */
+.Button {
+    border: 2px solid $highlight;
+    color: $highlight;
+    border-radius: 2px;
+    background: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1em;
+    font-weight: 600;
+    transition: 0.3s ease-out;
+    text-shadow: 0 1px 0 #fff;
+
+    &:hover {
+        cursor: pointer;
+        border-color: $highlight-dark;
+        color: $highlight-dark;
+    }
+    &:focus {
+        outline: none;
+    }
+    &:active {
+        top: 0;
+    }
+    &:visited {
+        border-color: $highlight;
+        color: $highlight;
+    }
+}
+
+.Button--prominent {
+    border-color: #333;
+    color: #222;
+}
+
+.Button--light {
+    border-color: #fff;
+    color: #fff;
+    text-shadow: none;
+    -webkit-filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.25));
+    -webkit-transform: translateZ(0);
+    font-weight: 400;
+}
+
+// Remove firefox's inner outline on buttons
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sit ubu sit!</title>
+    <meta name="description" content="Dog and puppy training courses, designed for new dog owners.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600,300" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <header class="Header">
+      <div class="Container">
+        <h1 class="Header-logo">Sit ubu sit!</h1>
+        <nav class="Navigation">
+          <ul class="Navigation-list">
+            <li class="Navigation-item"><a title="Prices" href="#prices">Prices</a></li>
+            <li class="Navigation-item"><a title="Services" href="#services">Services</a></li>
+            <li class="Navigation-item"><a title="Contact" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="Overlay"><a data-action="close-overlay" href="#" class="Button Overlay-close">&times;</a>
+      <div class="Overlay-content js-enrolmentSection">
+        <h3 class="Overlay-heading Section-heading">Enrol Your Dog In A Course</h3>
+        <p class="Overlay-copy">Use the form below to enrol your dog in a course. After enrolling, your dog will have a <strong>reserved spot in the course for the next 48 hours</strong>. A deposit will have to be made within this time to guarantee your dog's spot in the course. We will send you an email with all the details after form submission.</p>
+        <form novalidate class="js-booking">
+          <div class="Slat">
+            <label for="name"></label>
+            <input type="text" id="name" name="name" placeholder="Your Full Name" value="">
+          </div>
+          <div class="Slat">
+            <label for="mobile"></label>
+            <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" value="">
+          </div>
+          <div class="Slat">
+            <input type="email" name="email" placeholder="Email address" value="">
+          </div>
+          <div class="Slat">
+            <input type="text" name="dogsName" placeholder="Your Dog's Name" value="">
+          </div>
+          <div class="Slat">
+            <label>Course You Wish To Enrol In</label><br>
+            <select data-action="selectCourse">
+              <option>Puppy Preschool</option>
+              <option>Basic Obedience</option>
+              <option>Tricks For Your Dog</option>
+              <option>Agility Course Training</option>
+            </select>
+          </div>
+          <div class="Slat">
+            <label>Starting Date You Want</label><br>
+            <select data-action="updateAvailability">
+              <option>1st June (3 spots)</option>
+              <option>1st July (10 spots)</option>
+            </select>
+          </div>
+          <div class="Slat">
+            <button data-action="enrol" type="submit" class="Button Button--prominent">Enrol My Dog</button>
+          </div>
+        </form>
+      </div>
+      <div class="Overlay-content Message--success">
+        <h3 class="Message-heading">Your dog has been successfully enrolled!</h3>
+      </div>
+    </div>
+    <section class="Marquee">
+      <div class="Marquee-background"></div>
+      <div class="Marquee-content Container">
+        <div class="Marquee-text">
+          <h1>Dog and puppy training courses, <br>designed for new dog owners.</h1>
+          <p>All our classes teach modern, behavioural techniques for new owners to learn how to train their new best friend.</p>
+          <p><a title="Learn More" href="#services" class="Marquee-link">Learn more</a></p>
+        </div>
+      </div><a href="#services" class="Arrow"><span class="Arrow-shape"></span></a>
+    </section>
+    <div class="Main">
+      <section class="Section Section--services">
+        <div class="Container">
+          <header class="Section-header"><a href="#services" id="services">
+              <h2 class="Section-heading">Services</h2></a>
+            <div class="Section-subheading">
+              <p>We provide puppy training all the way through to advanced trick training. All our classes use modern behavioural techniques to teach your dog in the most efficient and friendly way.</p>
+            </div>
+          </header>
+          <article class="Service">
+            <header class="Service-header u-col">
+              <h3 class="Service-heading">Puppy Preschool</h3>
+              <div class="Service-copy">
+                <p>These take place over 5 weeks – with 1 x 2hr session per week and homework in between. This 5 week puppy pre school course is ideal for puppies aged between 8-16 weeks. Class sizes are small to allow for individual attention. This course is designed to set your puppy up with a basic foundation in learning &amp; training and prevent future problems such as fearfulness, aggression and destructive behaviour. To get the full benefits of the course, practicing at home during the week is vital.</p>
+                <p>This class will also assist in socialising your puppy to other dogs, people and new things in a safe and secure environment. This is vital to ensure a well adjusted, calm, happy puppy.</p>
+                <p>We run puppy preschools starting the first week of the month. We have sessions on Saturday mornings (9 -11) or Wednesday evenings (6 – 8).</p>
+              </div>
+            </header>
+            <figure class="Service-figure u-col">
+              <table>
+                <tr>
+                  <th>Course Length</th>
+                  <td>5 weeks</td>
+                </tr>
+                <tr>
+                  <th>Next Start Date</th>
+                  <td>1st June</td>
+                </tr>
+                <tr>
+                  <th>Availability</th>
+                  <td><span class="Tag--green">3 Spots Available</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Lessons</th>
+                  <td>1 x 2h lessons/week</td>
+                </tr>
+                <tr>
+                  <th>Cost</th>
+                  <td>$250</td>
+                </tr>
+                <tr>
+                  <th>Dog Ages</th>
+                  <td>8&ndash;16 weeks</td>
+                </tr>
+                <tr>
+                  <th>Times</th>
+                  <td>Sat 9&ndash;11am <br>Wed 6&ndash;8pm</td>
+                </tr>
+              </table>
+              <div class="Service-wrapButton"><a data-action="open-overlay" href="#" class="Button">Enroll Your Puppy &rarr;</a></div>
+            </figure>
+          </article>
+          <article class="Service">
+            <header class="Service-header u-col">
+              <h3 class="Service-heading">Basic Obedience</h3>
+              <div class="Service-copy">
+                <p>Covers basic obedience training for your dog – young or old. This 6 week beginner's course is ideal for older puppies and dogs that are new to training or alternatively may know a few commands to varying degrees of reliability. Class sizes are small to allow for individual attention. No prior training knowledge is required on either the part of the owner or dog. To get the full benefits of the course, practicing at home during the week is vital.</p>
+                <p>An added benefit of attending a group class with your dog is socialising them to other dogs and people in a safe nd secure environment. This is vital to ensure a well adjusted, calm, happy dog.</p>
+                <p>Preventing common problems such as Jumping Up, Chewing, Attention-Seeking, Hyperactivity and Digging are also addressed during this course.</p>
+              </div>
+            </header>
+            <figure class="Service-figure u-col">
+              <table>
+                <tr>
+                  <th>Course Length</th>
+                  <td>6 weeks</td>
+                </tr>
+                <tr>
+                  <th>Next Start Date</th>
+                  <td>1st June</td>
+                </tr>
+                <tr>
+                  <th>Availability</th>
+                  <td><span class="Tag--red">No Spots Available</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Lessons</th>
+                  <td>1 x 2h lessons/week</td>
+                </tr>
+                <tr>
+                  <th>Cost</th>
+                  <td>$200</td>
+                </tr>
+                <tr>
+                  <th>Dog Ages</th>
+                  <td>16 weeks+</td>
+                </tr>
+                <tr>
+                  <th>Times</th>
+                  <td>Sat 11am&ndash;1pm <br>Thu 6&ndash;8pm</td>
+                </tr>
+              </table>
+              <div class="Service-wrapButton"><a data-action="open-overlay" href="#" class="Button">Enroll Your Dog &rarr;</a></div>
+            </figure>
+          </article>
+          <article class="Service">
+            <header class="Service-header u-col">
+              <h3 class="Service-heading">Tricks For Your Dog</h3>
+              <div class="Service-copy">
+                <p>This 5 week clicker training course is ideal for older puppies and adult dogs that have some basic training. Class sizes are small to allow for individual attention. Teaching tricks and games is a great way to get to know your dog better using fun and interesting training techniques. This class is fun, easy and there's no pressure to be perfect!</p>
+                <p>Once you learn how to train your dog to do tricks, you can train nearly any new behaviour. Even obedience exercises are essentially just tricks! When you and your dog approach training in a relaxed and fun manner it leads to improved learning, for both of you!</p>
+                <p>Learn tricks such as High Five, Wave, Roll Over, Spin, Dead Dog, Sneeze, Yawn, Fetch, Take a Bow, Back Up, Touch and More. If you've ever wanted your dog to be able to get you a beer then this is the course for you!</p>
+              </div>
+            </header>
+            <figure class="Service-figure u-col">
+              <table>
+                <tr>
+                  <th>Course Length</th>
+                  <td>5 weeks</td>
+                </tr>
+                <tr>
+                  <th>Next Start Date</th>
+                  <td>1st June</td>
+                </tr>
+                <tr>
+                  <th>Availability</th>
+                  <td><span class="Tag--green">7 Spots Available</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Lessons</th>
+                  <td>1 x 2h lessons/week</td>
+                </tr>
+                <tr>
+                  <th>Cost</th>
+                  <td>$200</td>
+                </tr>
+                <tr>
+                  <th>Dog Ages</th>
+                  <td>16 weeks+</td>
+                </tr>
+                <tr>
+                  <th>Times</th>
+                  <td>Sat 9&ndash;11am <br>Wed 6&ndash;8pm</td>
+                </tr>
+              </table>
+              <div class="Service-wrapButton"><a data-action="open-overlay" href="#" class="Button">Enroll Your Dog &rarr;</a></div>
+            </figure>
+          </article>
+          <article class="Service">
+            <header class="Service-header u-col">
+              <h3 class="Service-heading">Agility Course Training</h3>
+              <div class="Service-copy">
+                <p>This 6 week course is ideal for dogs that have previously completed Basic Obedience &amp; Tricks courses (however this is not essential). Class sizes are small to allow for individual attention. This course is designed to teach owners how to control their dogs through a basic but fun agility course. We will teach you how to connect with your dog and teach your dog how to follow hand &amp; body signals. Learn how to get your dog to run through tunnels, jump over jumps, weave the weave poles and lots of other fun things.</p>
+                <p>This course is a fantastic introduction to the world of dog sports and a great way to teach your dog the correct way and to achieve the best results.</p>
+              </div>
+            </header>
+            <figure class="Service-figure u-col">
+              <table>
+                <tr>
+                  <th>Course Length</th>
+                  <td>6 weeks</td>
+                </tr>
+                <tr>
+                  <th>Next Start Date</th>
+                  <td>1st June</td>
+                </tr>
+                <tr>
+                  <th>Availability</th>
+                  <td><span class="Tag--green">5 Spots Available</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Lessons</th>
+                  <td>1 x 2h lessons/week</td>
+                </tr>
+                <tr>
+                  <th>Cost</th>
+                  <td>$300</td>
+                </tr>
+                <tr>
+                  <th>Dog Ages</th>
+                  <td>16 weeks+</td>
+                </tr>
+                <tr>
+                  <th>Times</th>
+                  <td>Sat 11am&ndash;1pm <br>Thu 6&ndash;8pm</td>
+                </tr>
+              </table>
+              <div class="Service-wrapButton"><a data-action="open-overlay" href="#" class="Button">Enroll Your Dog &rarr;</a></div>
+            </figure>
+          </article>
+        </div>
+      </section>
+      <section class="Section--prices">
+        <div class="Container">
+          <header class="Section-header"><a href="#prices" id="prices">
+              <h2 class="Section-heading">Prices</h2></a>
+            <div class="Section-subheading">
+              <p>Below are the prices for our popular dog training courses. All of our courses go for 5 or 6 weeks, so the prices are for the full duration.</p>
+            </div>
+          </header>
+          <div class="CourseList Container">
+            <div class="Course u-col">
+              <h3 class="Course-name">Puppy Preschool</h3><span class="Course-price"><span class="Course-priceSymbol">$</span> 250</span><span class="Course-info">full course fee</span>
+            </div>
+            <div class="Course u-col">
+              <h3 class="Course-name">Basic Obedience</h3><span class="Course-price"><span class="Course-priceSymbol">$</span> 200</span><span class="Course-info">full course fee</span>
+            </div>
+            <div class="Course u-col">
+              <h3 class="Course-name">Tricks For Your Dog</h3><span class="Course-price"><span class="Course-priceSymbol">$</span> 250</span><span class="Course-info">full course fee</span>
+            </div>
+            <div class="Course u-col">
+              <h3 class="Course-name">Agility Course Training</h3><span class="Course-price"><span class="Course-priceSymbol">$</span> 300</span><span class="Course-info">full course fee</span>
+            </div>
+          </div>
+          <footer>
+            <div class="Container">
+              <div class="CallToAction"><a data-action="open-overlay" href="#" class="Button Button--prominent Button Button--prominent">Reserve Your Dog A Place In An Upcoming Course &rarr;</a></div>
+            </div>
+          </footer>
+        </div>
+      </section>
+      <section class="contact">
+        <div class="Container">
+          <header class="Section-header"><a href="#contact" id="contact">
+              <h2 class="Section-heading">Contact</h2></a>
+            <div class="Section-subheading">
+              <p>We are located at the <a title="Our location on google maps" href="https://goo.gl/maps/Z7qnI" target="_blank">Cnr of Venner Rd &amp; Fairfield Rd, Fairfield</a>. <br>Call the office on <b>3344 8962</b> or our head trainer Jason on <b>0498 746 242</b>.<br> <a href="mailto:hello@situbusit.com">hello@situbusit.com</a></p>
+            </div>
+          </header><a title="Our location on google maps" href="https://goo.gl/maps/Z7qnI" target="_blank" class="a--wrapperLink"><img src="images/map.jpg" alt="Our location on google maps"></a>
+        </div>
+      </section>
+      <footer class="Footer">
+        <div class="Container">&copy;Sit ubu sit! 2014</div>
+      </footer>
+      <script src="bower_components/jquery/dist/jquery.min.js"></script>
+      <script src="bower_components/jquery.validation/dist/jquery.validate.min.js"></script>
+      <script src="scripts/main.js"></script>
+      <script src="bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+      <script src="bower_components/jquery.localScroll/jquery.localScroll.min.js"></script>
+    </div>
+  </body>
+</html>

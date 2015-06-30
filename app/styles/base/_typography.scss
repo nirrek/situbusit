@@ -1,0 +1,58 @@
+/**
+ * Basic Typgrographic Styles
+ */
+h1 {
+    font-size: ms(4);
+    margin: 0 0 1rem;
+    color: $color--area-heading;
+}
+h2 {
+    font-size: ms(3);
+    margin: 0 0 1rem;
+    color: $color--area-heading;
+}
+h3 {
+    font-size: ms(2);
+    margin: 0 0 1rem;
+    color: $color--area-heading;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+b {
+    color: $color--area-heading;
+}
+
+a {
+    color: $highlight;
+    text-decoration: none;
+    transition: color 0.3s ease-out;
+    font-weight: bold;
+    &:hover {
+        color: $highlight-dark;
+        border-bottom: 2px solid;
+    }
+    &:active {
+        position: relative;
+        top: 1px;
+    }
+    &:visited {
+        color: darken($highlight-dark, 10%);
+    }
+}
+
+.a--wrapperLink {
+    display: block;
+    &:hover {
+        border-bottom: none;
+    }
+}
+
+
+::selection {
+    background: $highlight;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
