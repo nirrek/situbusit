@@ -19,7 +19,15 @@
   }
 
   a {
-    @extend %headerLinkStyle;
+    color: #fff;
+    &:hover {
+        color: #fff;
+        position: static;
+        border-bottom: none;
+    }
+    &:visited {
+        color: #fff;
+    }
     font-size: 0.9rem;
   }
 }
